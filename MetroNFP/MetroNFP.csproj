@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7B75F48-6755-4D29-BCB5-E7E1303B2277}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetroNFP</RootNamespace>
+    <AssemblyName>MetroNFP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AnalogClock">
+      <HintPath>bin\Debug\AnalogClock.dll</HintPath>
+    </Reference>
+    <Reference Include="BehComponents, Version=2.1.0.0, Culture=neutral, PublicKeyToken=7aac51afb1c54590, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\BehComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="ConvertDate">
+      <HintPath>bin\Debug\ConvertDate.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiCalend">
+      <HintPath>bin\Debug\FarsiCalend.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.111.0, Culture=neutral, PublicKeyToken=376f63eb748ad132, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.5.111.0, Culture=neutral, PublicKeyToken=376f63eb748ad132, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3, Version=3.5.111.0, Culture=neutral, PublicKeyToken=376f63eb748ad132, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.111.0, Culture=neutral, PublicKeyToken=376f63eb748ad132, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.111.0, Culture=neutral, PublicKeyToken=376f63eb748ad132, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.111.0, Culture=neutral, PublicKeyToken=376f63eb748ad132, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BankHoliday.cs" />
+    <Compile Include="Common\SchoolHoliday.cs" />
+    <Compile Include="Common\WeekDays.cs" />
+    <Compile Include="Common\TimeSlotProfile.cs" />
+    <Compile Include="Common\TimeSlot.cs" />
+    <Compile Include="Common\Fine.cs" />
+    <Compile Include="Common\MediaKind.cs" />
+    <Compile Include="Common\PRDDynamicMessage.cs" />
+    <Compile Include="Common\PRDMessage.cs" />
+    <Compile Include="Common\DiscountRefund.cs" />
+    <Compile Include="Common\DiscountRefundProfile.cs" />
+    <Compile Include="Common\PrintingDynamicMessage.cs" />
+    <Compile Include="Common\PrintingDynamicVariable.cs" />
+    <Compile Include="Common\PrintingProfile.cs" />
+    <Compile Include="Common\PrintingStaticMessage.cs" />
+    <Compile Include="Common\Processing.cs" />
+    <Compile Include="Common\ProcessingAlgorithm.cs" />
+    <Compile Include="Common\ProcessingAlgorithmOperationKind.cs" />
+    <Compile Include="Common\ProcessingAlgorithmProfile.cs" />
+    <Compile Include="Common\ReaderMessage.cs" />
+    <Compile Include="Common\ReaderDynamicMessage.cs" />
+    <Compile Include="Common\RejectCode.cs" />
+    <Compile Include="Common\SectionFare.cs" />
+    <Compile Include="Common\SectionFareProfile.cs" />
+    <Compile Include="Common\Ticket.cs" />
+    <Compile Include="Common\TicketKind.cs" />
+    <Compile Include="Common\TransferProfile.cs" />
+    <Compile Include="Common\Utility\Constant.cs" />
+    <Compile Include="Common\Utility\MessageBoxEnumTypes.cs" />
+    <Compile Include="Common\Utility\NFPMessageBox.cs" />
+    <Compile Include="Common\Utility\Utility.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\BusinnesLogic\NetworkBL.cs" />
+    <Compile Include="Network\BusinnesLogic\RailRoadBL.cs" />
+    <Compile Include="Network\BusinnesLogic\SectionBL.cs" />
+    <Compile Include="Network\BusinnesLogic\StationBL.cs" />
+    <Compile Include="Common\RailRoad.cs" />
+    <Compile Include="Common\Section.cs" />
+    <Compile Include="Common\Station.cs" />
+    <Compile Include="Common\Utility\ConnectionManager.cs" />
+    <Compile Include="Common\Utility\EnumType.cs" />
+    <Compile Include="Common\Utility\Setting.cs" />
+    <Compile Include="Network\DataAccess\RailRoadDAL.cs" />
+    <Compile Include="Network\DataAccess\SectionDAL.cs" />
+    <Compile Include="Network\DataAccess\StationDAL.cs" />
+    <Compile Include="Network\Presentation\ODMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\ODMain.Designer.cs">
+      <DependentUpon>ODMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Presentation\AddRailRoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\AddRailRoad.Designer.cs">
+      <DependentUpon>AddRailRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Presentation\RailRoadMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\RailRoadMain.Designer.cs">
+      <DependentUpon>RailRoadMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Presentation\StationMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\StationMain.Designer.cs">
+      <DependentUpon>StationMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Presentation\UserControls\RailRoad1Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\UserControls\RailRoad1Wizard.Designer.cs">
+      <DependentUpon>RailRoad1Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Presentation\UserControls\RailRoad2Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\UserControls\RailRoad2Wizard.Designer.cs">
+      <DependentUpon>RailRoad2Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Presentation\UserControls\StationWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Network\Presentation\UserControls\StationWizard.Designer.cs">
+      <DependentUpon>StationWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Ticket\BussinesLogic\HolidayBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\PrintingProfileBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\TimeSlotProfileBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\WeekDaysBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\MediaKindBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\ProcessingAlgorithmOperationKindBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\ProcessingAlgorithmProfileBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\ProcessingBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\RejectCodeBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\TicketBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\TicketKindBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\TransferProfileBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\FineBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\PRDMessageBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\DiscountRefundProfileBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\ReaderMessageBL.cs" />
+    <Compile Include="Ticket\BussinesLogic\SectionFareProfileBL.cs" />
+    <Compile Include="Ticket\DataAccess\HolidayDAL.cs" />
+    <Compile Include="Ticket\DataAccess\TimeSlotProfileDAL.cs" />
+    <Compile Include="Ticket\DataAccess\WeekDaysDAL.cs" />
+    <Compile Include="Ticket\DataAccess\MediaKindDAL.cs" />
+    <Compile Include="Ticket\DataAccess\PrintingProfileDAL.cs" />
+    <Compile Include="Ticket\DataAccess\ProcessingAlgorithmOperationKindDAL.cs" />
+    <Compile Include="Ticket\DataAccess\ProcessingAlgorithmProfileDAL.cs" />
+    <Compile Include="Ticket\DataAccess\ProcessingDAL.cs" />
+    <Compile Include="Ticket\DataAccess\RejectCodeDAL.cs" />
+    <Compile Include="Ticket\DataAccess\TicketDAL.cs" />
+    <Compile Include="Ticket\DataAccess\TicketKindDAL.cs" />
+    <Compile Include="Ticket\DataAccess\TransferProfileDAL.cs" />
+    <Compile Include="Ticket\DataAccess\FineDAL.cs" />
+    <Compile Include="Ticket\DataAccess\PRDMessageDAL.cs" />
+    <Compile Include="Ticket\DataAccess\DiscountRefundProfileDAL.cs" />
+    <Compile Include="Ticket\DataAccess\ReaderMessageDAL.cs" />
+    <Compile Include="Ticket\DataAccess\SectionFareProfileDAL.cs" />
+    <Compile Include="Ticket\Presentation\HolidaysMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\HolidaysMain.Designer.cs">
+      <DependentUpon>HolidaysMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\PrintingProfileMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\PrintingProfileMain.designer.cs">
+      <DependentUpon>PrintingProfileMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\TicketMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\TicketMain.Designer.cs">
+      <DependentUpon>TicketMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\TimeSlotProfileMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\TimeSlotProfileMain.Designer.cs">
+      <DependentUpon>TimeSlotProfileMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\ProcessingAlgorithmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\ProcessingAlgorithmMain.Designer.cs">
+      <DependentUpon>ProcessingAlgorithmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\RejectCodeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\RejectCodeMain.Designer.cs">
+      <DependentUpon>RejectCodeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\TransferProfileMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\TransferProfileMain.Designer.cs">
+      <DependentUpon>TransferProfileMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\FineMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\FineMain.Designer.cs">
+      <DependentUpon>FineMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\PRDMessageMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\PRDMessageMain.Designer.cs">
+      <DependentUpon>PRDMessageMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\PRDMessageText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\PRDMessageText.Designer.cs">
+      <DependentUpon>PRDMessageText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\DiscountRefundMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\DiscountRefundMain.Designer.cs">
+      <DependentUpon>DiscountRefundMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\ReaderMessageMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\ReaderMessageMain.Designer.cs">
+      <DependentUpon>ReaderMessageMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\ReaderMessageText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\ReaderMessageText.Designer.cs">
+      <DependentUpon>ReaderMessageText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\SectionFareMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\SectionFareMain.Designer.cs">
+      <DependentUpon>SectionFareMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket11Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket11Wizard.Designer.cs">
+      <DependentUpon>Ticket11Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket10Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket10Wizard.Designer.cs">
+      <DependentUpon>Ticket10Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket9Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket9Wizard.Designer.cs">
+      <DependentUpon>Ticket9Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket8Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket8Wizard.Designer.cs">
+      <DependentUpon>Ticket8Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket7Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket7Wizard.Designer.cs">
+      <DependentUpon>Ticket7Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket6Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket6Wizard.Designer.cs">
+      <DependentUpon>Ticket6Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket5Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket5Wizard.Designer.cs">
+      <DependentUpon>Ticket5Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket4Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket4Wizard.Designer.cs">
+      <DependentUpon>Ticket4Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket1Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket1Wizard.Designer.cs">
+      <DependentUpon>Ticket1Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket2Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket2Wizard.Designer.cs">
+      <DependentUpon>Ticket2Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket3Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ticket\Presentation\UserControls\Ticket3Wizard.Designer.cs">
+      <DependentUpon>Ticket3Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardMain.Designer.cs">
+      <DependentUpon>WizardMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\ODMain.resx">
+      <DependentUpon>ODMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\AddRailRoad.resx">
+      <DependentUpon>AddRailRoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\RailRoadMain.resx">
+      <DependentUpon>RailRoadMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\StationMain.resx">
+      <DependentUpon>StationMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\UserControls\RailRoad1Wizard.resx">
+      <DependentUpon>RailRoad1Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\UserControls\RailRoad2Wizard.resx">
+      <DependentUpon>RailRoad2Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\Presentation\UserControls\StationWizard.resx">
+      <DependentUpon>StationWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Ticket\Presentation\HolidaysMain.resx">
+      <DependentUpon>HolidaysMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\PrintingProfileMain.resx">
+      <DependentUpon>PrintingProfileMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\TicketMain.resx">
+      <DependentUpon>TicketMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\TimeSlotProfileMain.resx">
+      <DependentUpon>TimeSlotProfileMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\ProcessingAlgorithmMain.resx">
+      <DependentUpon>ProcessingAlgorithmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\RejectCodeMain.resx">
+      <DependentUpon>RejectCodeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\TransferProfileMain.resx">
+      <DependentUpon>TransferProfileMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\FineMain.resx">
+      <DependentUpon>FineMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\PRDMessageMain.resx">
+      <DependentUpon>PRDMessageMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\PRDMessageText.resx">
+      <DependentUpon>PRDMessageText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\DiscountRefundMain.resx">
+      <DependentUpon>DiscountRefundMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\ReaderMessageMain.resx">
+      <DependentUpon>ReaderMessageMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\ReaderMessageText.resx">
+      <DependentUpon>ReaderMessageText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\SectionFareMain.resx">
+      <DependentUpon>SectionFareMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket11Wizard.resx">
+      <DependentUpon>Ticket11Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket10Wizard.resx">
+      <DependentUpon>Ticket10Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket9Wizard.resx">
+      <DependentUpon>Ticket9Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket8Wizard.resx">
+      <DependentUpon>Ticket8Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket7Wizard.resx">
+      <DependentUpon>Ticket7Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket6Wizard.resx">
+      <DependentUpon>Ticket6Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket5Wizard.resx">
+      <DependentUpon>Ticket5Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket4Wizard.resx">
+      <DependentUpon>Ticket4Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket1Wizard.resx">
+      <DependentUpon>Ticket1Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket2Wizard.resx">
+      <DependentUpon>Ticket2Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket\Presentation\UserControls\Ticket3Wizard.resx">
+      <DependentUpon>Ticket3Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardMain.resx">
+      <DependentUpon>WizardMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Common.RailRoad.datasource" />
+    <None Include="Properties\DataSources\Common.Section.datasource" />
+    <None Include="Properties\DataSources\Common.Station.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x22.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X22.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
